@@ -1,33 +1,139 @@
-<h3>Projects</h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abin Sanal – Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            color: #222;
+        }
+        header {
+            background: #000;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .profile {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .profile img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid black;
+        }
+        .projects {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+        .project-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 20px;
+        }
+        .project-card img {
+            width: 250px;
+            border-radius: 10px;
+        }
+        .project-info h2 {
+            margin: 0;
+            margin-bottom: 10px;
+        }
+        a.button {
+            display: inline-block;
+            margin-top: 10px;
+            background: black;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+        .certificates {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+        .certificates a {
+            display: block;
+            margin-bottom: 10px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
 
-<!-- Project 1 -->
-<div class="project">
-  <h4>Find My Mechanic</h4>
-  <img src="projects/mechanic1.jpg" style="width:100%; border-radius:10px;">
-  <div class="meta">Flask · Python · HTML/CSS · SQL</div>
-  <p class="small">A platform that helps users find nearby mechanics with location-based search, dashboards and admin control.</p>
+<header>
+    <h1>Abin Sanal – Portfolio</h1>
+</header>
+
+<div class="profile">
+    <img src="abin sanal photo.jpg" alt="Profile Photo">
+    <h2>Full Stack Developer | AI & ML Enthusiast</h2>
+    <p>I build intelligent systems using Python, Machine Learning, and Web Technologies.</p>
 </div>
 
-<!-- Project 2 -->
-<div class="project" style="margin-top:12px">
-  <h4>Eye Disease Detector</h4>
-  <img src="projects/eye1.jpg" style="width:100%; border-radius:10px;">
-  <div class="meta">Deep Learning · CNN</div>
-  <p class="small">A deep learning model that identifies eye diseases from retinal images.</p>
-</div>
+<section class="projects">
+    <h1>My Projects</h1>
 
-<!-- Project 3 -->
-<div class="project" style="margin-top:12px">
-  <h4>AI Attendance Taker</h4>
-  <img src="projects/attendance1.jpg" style="width:100%; border-radius:10px;">
-  <div class="meta">OpenCV · MediaPipe · Flask</div>
-  <p class="small">Face recognition–based attendance marking system using webcam.</p>
-</div>
+    <!-- 1. AI Attendance Register -->
+    <div class="project-card">
+        <img src="ai_attendence_register.jpg">
+        <div class="project-info">
+            <h2>AI Attendance Register (Face Recognition)</h2>
+            <p>Automated attendance system using MediaPipe and OpenCV. It detects and recognizes faces in real time and maintains attendance logs using a CSV-based system.</p>
+            <p><b>Tech Used:</b> OpenCV, MediaPipe, Python</p>
+        </div>
+    </div>
 
-<!-- Project 4 -->
-<div class="project" style="margin-top:12px">
-  <h4>Food Waste Management</h4>
-  <img src="projects/food1.jpg" style="width:100%; border-radius:10px;">
-  <div class="meta">Python · ML</div>
-  <p class="small">A system that connects food donors and receivers using AI-based demand predictions.</p>
-</div>
+    <!-- 2. Eye Disease Detector -->
+    <div class="project-card">
+        <img src="eye_disease_detector.jpg">
+        <div class="project-info">
+            <h2>Eye Disease Detection (CNN + TensorFlow)</h2>
+            <p>A deep learning model built using CNN and TensorFlow to classify major eye diseases using retinal images. Achieves high accuracy with real-time prediction support.</p>
+            <p><b>Tech Used:</b> CNN, TensorFlow, NumPy, OpenCV</p>
+        </div>
+    </div>
+
+    <!-- 3. Find My Mechanic -->
+    <div class="project-card">
+        <img src="find_my_mechanic.jpg">
+        <div class="project-info">
+            <h2>Find My Mechanic – Python Flask Web App</h2>
+            <p>A full-featured website that helps travelers find nearby mechanics. Includes login for User/Admin/Service Provider and rating, chat, and service details.</p>
+            <p><b>Tech Used:</b> Flask, SQL, HTML/CSS/JS</p>
+        </div>
+    </div>
+
+    <!-- 4. Food Waste Management -->
+    <div class="project-card">
+        <img src="food_waste_management.jpg">
+        <div class="project-info">
+            <h2>Food Waste Management – Streamlit Application</h2>
+            <p>A modern Streamlit application that helps organizations track and minimize food waste. Includes visualization, data upload, and sustainability recommendations.</p>
+            <p><b>Tech Used:</b> Streamlit, Python, Pandas</p>
+        </div>
+    </div>
+
+</section>
+
+<section class="certificates">
+    <h1>Certifications</h1>
+    <a href="assets/cyber_security_certification.pdf" target="_blank">Cyber Security Certification</a>
+    <a href="assets/Data_analyst_certification.pdf" target="_blank">Data Analyst Certification</a>
+    <a href="assets/machine_learning_certification.pdf" target="_blank">Machine Learning Certification</a>
+</section>
+
+</body>
+</html>
