@@ -1,302 +1,33 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Abin Sanal — Machine Learning Engineer</title>
-  <meta name="description" content="Portfolio of Abin Sanal — Machine Learning Engineer. Python, Flask, Django, ML, DL, OpenCV">
-  <style>
-    :root{--bg:#f5f7fb;--card:#ffffff;--muted:#6b7280;--accent:#0f4c81;--accent-2:#0b63a7}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:#0f172a;line-height:1.5}
-    .container{max-width:1100px;margin:36px auto;padding:20px}
-    .layout{display:grid;grid-template-columns:320px 1fr;gap:24px}
-    @media (max-width:880px){.layout{grid-template-columns:1fr}.sidebar{order:0}}
+<h3>Projects</h3>
 
-    /* Sidebar */
-    .sidebar{background:var(--card);padding:24px;border-radius:12px;box-shadow:0 6px 18px rgba(8,15,30,0.06)}
-    .profile{display:flex;gap:16px;align-items:center}
-    .avatar{width:72px;height:72px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:20px}
-    h1.name{margin:0;font-size:20px}
-    .role{color:var(--muted);font-size:13px;margin-top:6px}
-    .muted{color:var(--muted);font-size:13px}
-    .sidebar section{margin-top:20px}
-    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;font-size:14px}
-    .socials{display:flex;gap:10px;margin-top:12px}
-    .socials a{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:8px;background:#eef6ff;color:var(--accent);text-decoration:none;font-weight:600}
+<!-- Project 1 -->
+<div class="project">
+  <h4>Find My Mechanic</h4>
+  <img src="projects/mechanic1.jpg" style="width:100%; border-radius:10px;">
+  <div class="meta">Flask · Python · HTML/CSS · SQL</div>
+  <p class="small">A platform that helps users find nearby mechanics with location-based search, dashboards and admin control.</p>
+</div>
 
-    /* Main */
-    .main{background:linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.9));padding:26px;border-radius:12px;box-shadow:0 6px 18px rgba(8,15,30,0.04)}
-    .hero{display:flex;justify-content:space-between;align-items:center;gap:16px}
-    .hero-left h2{margin:0;font-size:28px}
-    .hero-left p{margin:6px 0;color:var(--muted)}
-    .actions{display:flex;gap:12px}
-    .outline{padding:10px 14px;border-radius:10px;border:1px solid #dbeafe;background:transparent;color:var(--accent);text-decoration:none;font-weight:600}
+<!-- Project 2 -->
+<div class="project" style="margin-top:12px">
+  <h4>Eye Disease Detector</h4>
+  <img src="projects/eye1.jpg" style="width:100%; border-radius:10px;">
+  <div class="meta">Deep Learning · CNN</div>
+  <p class="small">A deep learning model that identifies eye diseases from retinal images.</p>
+</div>
 
-    /* Sections */
-    section.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:20px}
-    @media (max-width:680px){section.grid{grid-template-columns:1fr}}
-    .card{background:var(--card);padding:16px;border-radius:10px}
-    .skill{display:flex;justify-content:space-between;align-items:center;margin:10px 0}
-    .bar{height:8px;background:#eef2ff;border-radius:999px;overflow:hidden}
-    .bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2))}
+<!-- Project 3 -->
+<div class="project" style="margin-top:12px">
+  <h4>AI Attendance Taker</h4>
+  <img src="projects/attendance1.jpg" style="width:100%; border-radius:10px;">
+  <div class="meta">OpenCV · MediaPipe · Flask</div>
+  <p class="small">Face recognition–based attendance marking system using webcam.</p>
+</div>
 
-    .projects .project{display:flex;flex-direction:column;gap:8px;padding:12px;border-radius:10px;border:1px solid #eef2ff}
-    .project h4{margin:0}
-    .meta{color:var(--muted);font-size:13px}
-
-    .contact-form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    @media (max-width:680px){.contact-form{grid-template-columns:1fr}}
-    input,textarea{width:100%;padding:12px;border-radius:8px;border:1px solid #e6eef8;font-size:14px}
-    textarea{min-height:120px;resize:vertical}
-    .footer{margin-top:20px;color:var(--muted);font-size:13px;text-align:center}
-
-    /* small */
-    .small{font-size:13px;color:var(--muted)}
-  /* Dark Mode Styles */
-body.dark {
-    background: #0f0f0f;
-    color: white;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-body.dark .sidebar {
-    background: #1b1b1b;
-}
-
-body.dark a {
-    color: #ddd;
-}
-</style>
-<script>
-// Theme Toggle Logic
-const toggleBtn = document.getElementById('theme-toggle');
-
-toggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    if (document.body.classList.contains('dark')) {
-        toggleBtn.textContent = '🌞';
-    } else {
-        toggleBtn.textContent = '🌙';
-    }
-});
-</script>
-</head>
-<body>
-  <div class="container">
-    <div class="layout">
-      <aside class="sidebar">
-        <div class="profile">
-          <div class="avatar">AS</div>
-          <div>
-            <h1 class="name">Abin Sanal</h1>
-            <div class="role">Machine Learning Engineer</div>
-          </div>
-        </div>
-
-        <section>
-          <p class="muted">A machine learning engineer capable of building back-end systems with Python. Actively seeking job opportunities.</p>
-          <div style="margin-top:12px">
-            <a class="btn" href="#contact">Contact / Hire</a>
-          </div>
-        </section>
-
-        <section>
-          <h3 class="small">Contact</h3>
-          <div class="small">Email: <a href="mailto:abinsanal69@gmail.com">abinsanal69@gmail.com</a></div>
-          <div class="small" style="margin-top:6px">Location: Kannur, Kerala, India</div>
-        </section>
-
-        <section>
-          <h3 class="small">Skills</h3>
-          <div class="small" style="margin-top:8px">Python · Flask · Django · OpenCV · NumPy · pandas · Matplotlib · Seaborn · Machine Learning · Deep Learning</div>
-        </section>
-
-        <section>
-          <h3 class="small">Quick Links</h3>
-          <div style="margin-top:8px;display:flex;flex-direction:column;gap:8px">
-            <a class="outline" href="#projects">Projects</a>
-            <a class="outline" href="#resume">Resume</a>
-          </div>
-        </section>
-
-        <section>
-          <h3 class="small">Social</h3>
-          <div class="socials">
-            <a href="#" title="GitHub">GH</a>
-            <a href="https://www.linkedin.com/in/abin-sanal" title="LinkedIn">in</a>
-            <a href="#" title="Twitter">tw</a>
-          </div>
-        </section>
-      </aside>
-
-      <main class="main">
-        <header class="hero">
-          <div class="hero-left">
-            <h2>Hi — I’m Abin Sanal.</h2>
-            <p class="small">Machine Learning Engineer. I build ML systems and backend services using Python (Flask/Django). I enjoy solving real-world problems with computer vision and deep learning.</p>
-          </div>
-          <div class="actions">
-            <a class="btn" href="#projects">View Projects</a>
-            <a class="outline" href="#resume">Download Resume</a>
-          </div>
-        </header>
-
-<!-- Theme Toggle Button -->
-<button id="theme-toggle" class="fixed top-4 right-4 bg-gray-200 dark:bg-gray-700 p-2 rounded-full shadow">🌙</button>
-
-        <!-- Photo Section -->
-        <section id="photo" style="margin-top:18px; text-align:center;">
-          <div class="card" style="padding:20px; display:flex; flex-direction:column; align-items:center;">
-            <img src="profile.jpg" alt="Profile Photo" style="width:160px; height:160px; border-radius:50%; object-fit:cover; border:4px solid var(--accent);">
-            <p class="small" style="margin-top:10px;">Upload your photo as <strong>profile.jpg</strong> in the same folder</p>
-          </div>
-        </section>
-
-        <!-- Light/Dark Toggle -->
-        <div style="text-align:right; margin-top:12px; margin-bottom:-12px;">
-          <button id="theme-toggle" style="padding:8px 16px; border:none; background:var(--accent); color:white; border-radius:6px; cursor:pointer;">Toggle Theme</button>
-        </div>
-
-        <section id="about" class="grid" aria-label="About and Experience">
-          <div class="card">
-            <h3>About</h3>
-            <p class="small">Myself Abin Sanal — a machine learning engineer who is capable of building back-end systems even with Python. I'm currently looking for job opportunities where I can contribute to ML-driven products and learn from experienced teams.</p>
-
-            <h4 style="margin-top:12px">Core strengths</h4>
-            <ul class="small">
-              <li>End-to-end ML pipelines: data processing, model training, deployment</li>
-              <li>Computer vision projects using OpenCV and deep learning</li>
-              <li>REST APIs and microservices with Flask and Django</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>Experience / Services</h3>
-            <p class="small">Available for: Full-time roles, Contract work, Freelance ML projects (CV, model deployment, data pipelines).</p>
-            <div style="margin-top:12px">
-              <strong class="small">Tools & Frameworks</strong>
-              <div class="small" style="margin-top:6px">Python · Flask · Django · NumPy · pandas · Matplotlib · Seaborn · OpenCV · TensorFlow / PyTorch</div>
-            </div>
-          </div>
-        </section>
-
-        <section id="skills" style="margin-top:18px">
-          <div class="card">
-            <h3>Skills</h3>
-            <div class="skill"><div class="small">Python</div><div class="small">Expert</div></div>
-            <div class="bar" aria-hidden><i style="width:95%"></i></div>
-
-            <div class="skill"><div class="small">Machine Learning</div><div class="small">Advanced</div></div>
-            <div class="bar" aria-hidden><i style="width:86%"></i></div>
-
-            <div class="skill"><div class="small">Deep Learning</div><div class="small">Advanced</div></div>
-            <div class="bar" aria-hidden><i style="width:80%"></i></div>
-
-            <div class="skill"><div class="small">Flask & Django</div><div class="small">Advanced</div></div>
-            <div class="bar" aria-hidden><i style="width:82%"></i></div>
-
-            <div class="skill"><div class="small">OpenCV</div><div class="small">Advanced</div></div>
-            <div class="bar" aria-hidden><i style="width:78%"></i></div>
-          </div>
-        </section>
-
-        <section id="projects" style="margin-top:18px">
-          <div class="card projects">
-            <h3>Projects</h3>
-
-            <div class="project">
-              <h4>Find My Mechanic</h4>
-              <div class="meta">Flask · Python · HTML/CSS · SQL</div>
-              <p class="small">A platform that helps users find nearby mechanics with location-based search, service provider dashboards, admin controls, and real‑time interaction features.</p>
-            </div>
-
-            <div class="project" style="margin-top:12px">
-              <h4>Eye Disease Detector</h4>
-              <div class="meta">Deep Learning · OpenCV · CNN · Medical Imaging</div>
-              <p class="small">A deep learning system that detects eye diseases from retinal images using convolutional neural networks. Includes preprocessing pipeline and model deployment API.</p>
-            </div>
-
-            <div class="project" style="margin-top:12px">
-              <h4>AI Attendance Taker</h4>
-              <div class="meta">OpenCV · MediaPipe · Flask</div>
-              <p class="small">Face recognition‑based attendance system that identifies individuals in real-time and logs attendance automatically through a webcam interface.</p>
-            </div>
-
-            <div class="project" style="margin-top:12px">
-              <h4>Food Waste Management System</h4>
-              <div class="meta">Python · Flask · ML</div>
-              <p class="small">A system designed to reduce food waste by connecting donors with receivers, tracking surplus food, and optimizing distribution using predictive analytics.</p>
-            </div>
-
-          </div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education" style="margin-top:18px">
-          <div class="card">
-            <h3>Education</h3>
-            <ul class="small">
-              <li><strong>MCA</strong> — Chinmaya Institute of Technology, Kannur (2025)</li>
-              <li><strong>BSc Mathematics</strong> — Govt. Peringome College (2023)</li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- Certifications Section -->
-        <section id="certifications" style="margin-top:18px">
-          <div class="card">
-            <h3>Certifications & Internships</h3>
-            <ul class="small">
-              <li>Machine Learning Internship — Nestsoft, Infopark Kochi (3 months)</li>
-              <li>Data Analyst Internship — Labmentrix, Bangalore</li>
-              <li>Currently: Machine Learning Engineer (Intern) — Labmentrix, Bangalore</li>
-            </ul>
-          </div>
-        </section>
-
-        <section id="resume" style="margin-top:18px">
-          <div class="card">
-            <h3>Resume</h3>
-            <p class="small">Download a ready-to-edit resume (replace the sample file with your real resume file named <code>resume.pdf</code> in the project root).</p>
-            <div style="margin-top:12px">
-              <a class="btn" href="/resume.pdf" download>Download Resume (PDF)</a>
-              <a class="outline" href="#contact" style="margin-left:8px">Contact</a>
-            </div>
-          </div>
-        </section>
-
-        <section id="contact" style="margin-top:18px">
-          <div class="card">
-            <h3>Contact</h3>
-            <p class="small">Interested in hiring or collaborating? Send a message or email me at <a href="mailto:abinsanal69@gmail.com">abinsanal69@gmail.com</a>.</p>
-
-            <form class="contact-form" action="mailto:abinsanal69@gmail.com" method="post" enctype="text/plain">
-              <input type="text" name="name" placeholder="Your name" required>
-              <input type="email" name="email" placeholder="Your email" required>
-              <textarea name="message" placeholder="Message" required></textarea>
-              <div style="grid-column:1/-1;display:flex;gap:8px;margin-top:8px">
-                <button type="submit" class="btn">Send Message</button>
-                <a class="outline" href="mailto:abinsanal69@gmail.com">Email Directly</a>
-              </div>
-            </form>
-
-          </div>
-        </section>
-
-        <div class="footer">© <span id="year"></span> Abin Sanal — Machine Learning Engineer</div>
-      </main>
-    </div>
-  </div>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-<script>
-  const toggleBtn = document.getElementById('theme-toggle');
-  toggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-  });
-</script>
-</body>
-</html>
+<!-- Project 4 -->
+<div class="project" style="margin-top:12px">
+  <h4>Food Waste Management</h4>
+  <img src="projects/food1.jpg" style="width:100%; border-radius:10px;">
+  <div class="meta">Python · ML</div>
+  <p class="small">A system that connects food donors and receivers using AI-based demand predictions.</p>
+</div>
